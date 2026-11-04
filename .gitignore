@@ -19,7 +19,10 @@ env/
 # Tool configurations
 .idea/
 .vscode/
-.claude/
+# Ignore local Claude Code config, but track project skills in .claude/skills/
+# (copies of skills/<name>/ that Claude Code loads as project skills).
+.claude/*
+!.claude/skills/
 .envrc
 .mcp.json
 

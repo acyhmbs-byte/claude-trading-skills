@@ -1,0 +1,4 @@
+# Runtime dependencies for standalone .skill installs (issue #330).
+# Verified by scripts/check_skill_deps.py.
+requests>=2.31.0
+tzdata>=2024.1
