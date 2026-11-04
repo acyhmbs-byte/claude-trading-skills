@@ -122,6 +122,10 @@ IMPORT_TO_DIST = {
 EXTRA_DIST_REQUIRED: dict[str, dict[str, str]] = {
     # BeautifulSoup(html, "lxml") in finviz_stock_client.py.
     "canslim-screener": {"lxml": "lxml parser backend selected by string literal"},
+    # zoneinfo.ZoneInfo("America/New_York") in provenance_contract.py needs an
+    # IANA database; Windows ships none, so stdlib zoneinfo falls back to tzdata.
+    "market-breadth-analyzer": {"tzdata": "IANA tz database for zoneinfo on Windows"},
+    "uptrend-analyzer": {"tzdata": "IANA tz database for zoneinfo on Windows"},
 }
 
 # skills-index.yaml integrations id -> distribution package, used for the
